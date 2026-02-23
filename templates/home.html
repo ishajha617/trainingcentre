@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IshaTeach Hub | Isha Pratihast</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+/* HEADER */
+
+header{
+background:#040835;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+font-size:40px;
+}
+
+header p{
+margin-top:8px;
+font-size:18px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:40px;
+background:#e9edff;
+}
+
+.hero h2{
+margin:0;
+font-size:30px;
+}
+
+.hero p{
+margin:10px 0 20px;
+}
+
+/* CONTAINER */
+
+.container{
+width:90%;
+margin:auto;
+}
+
+/* COURSE CARD */
+
+.course-card{
+background:white;
+padding:25px;
+margin:20px 0;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.course-card:hover{
+transform:scale(1.02);
+}
+
+/* BUTTON */
+
+button{
+background:#2563eb;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+/* CONTACT */
+
+.contact{
+background:#111827;
+color:white;
+padding:40px;
+text-align:center;
+margin-top:40px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#22c55e;
+padding:15px 20px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>IshaTeach Hub</h1>
+<p>By Isha Pratihast | DevOps & Cloud Training</p>
+
+</header>
+
+<div class="hero">
+
+<h2>Become DevOps Engineer</h2>
+<p>Python • Linux • Docker • Kubernetes • Cloud</p>
+
+<a href="/enroll/">
+<button>Start Learning</button>
+</a>
+
+</div>
+
+<div class="container">
+
+<h2>Our Courses</h2>
+
+{% for course in courses %}
+
+<div class="course-card">
+
+<h3>{{course.name}}</h3>
+
+<p>{{course.description}}</p>
+
+<p><b>Price:</b> ₹{{course.price}}</p>
+
+<a href="/enroll/">
+<button>Enroll Now</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 9354488768</p>
+<p>📧 ishapratihast37.15@gmail.com</p>
+<p>PhonePe / UPI: 9354488768</p>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/919354488768">
+Chat on WhatsApp
+</a>
+
+</body>
+</html>

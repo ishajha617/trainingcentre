@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f1f5f9;
+margin:0;
+}
+
+header{
+background:#040835;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px auto;
+width:80%;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>IshaTeach Hub</h1>
+<p>Student Dashboard</p>
+</header>
+
+<div class="card">
+
+<h2>{{student.name}}</h2>
+
+<p>Email: {{student.email}}</p>
+<p>Phone: {{student.phone}}</p>
+<p>Course: {{student.course.name}}</p>
+
+</div>
+
+</body>
+</html>
