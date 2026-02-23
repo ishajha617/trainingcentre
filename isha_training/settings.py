@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-2^r%di27!c_ueb%t%u9d78-355bh7qr)7=p_#_+%16x+9$6e07
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['trainingcentre-1.onrender.com','localhost','127.0.0.1']
-STATIC_ROOT = 'staticfiles'
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
