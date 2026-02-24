@@ -14,14 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.http import HttpResponse
+from django.urls import path
 from django.contrib import admin
-from django.urls import path, include
+from courses import views
 
-admin.site.site_header = "IshaTeach Hub Admin"
-admin.site.site_title = "IshaTeach Hub"
-admin.site.index_title = "Welcome to Isha Pratihast Dashboard"
+
+def google_verify(request):
+    return HttpResponse("google-site-verification: googled8f6b869755f3971.html")
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('courses.urls')),
+    path('', views.home),
+    path('enroll/', views.enroll),
+    path('googled8f6b869755f3971.html', google_verify),
 ]
