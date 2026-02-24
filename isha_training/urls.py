@@ -29,4 +29,17 @@ urlpatterns = [
     path('', views.home),
     path('enroll/', views.enroll),
     path('googled8f6b869755f3971.html', google_verify),
+
+]
+
+from django.views.generic import TemplateView
+from django.urls import path
+
+urlpatterns = [
+    
+    path(
+        "googled8f6b869755f3971.html",
+        TemplateView.as_view(template_name="googled8f6b869755f3971.html"),
+    ),
+
 ]
