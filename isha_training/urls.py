@@ -14,9 +14,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.http import HttpResponse
-from django.urls import path
 from django.contrib import admin
+from django.urls import path
+from django.http import HttpResponse
 from courses import views
 
 
@@ -26,21 +26,9 @@ def google_verify(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('', views.home),
     path('enroll/', views.enroll),
+
     path('googled8f6b869755f3971.html', google_verify),
-
-]
-
-from django.contrib import admin
-from django.urls import path
-from django.views.generic import TemplateView
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-
-    path(
-        "googled8f6b869755f3971.html",
-        TemplateView.as_view(template_name="googled8f6b869755f3971.html"),
-    ),
 ]
