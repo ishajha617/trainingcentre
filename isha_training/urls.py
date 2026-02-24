@@ -19,16 +19,12 @@ from django.urls import path
 from django.http import HttpResponse
 from courses import views
 
-
 def google_verify(request):
     return HttpResponse("google-site-verification: googled8f6b869755f3971.html")
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('', views.home),
     path('enroll/', views.enroll),
-
     path('googled8f6b869755f3971.html', google_verify),
 ]
