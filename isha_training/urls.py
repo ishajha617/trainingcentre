@@ -32,14 +32,15 @@ urlpatterns = [
 
 ]
 
-from django.views.generic import TemplateView
+from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    
+    path('admin/', admin.site.urls),
+
     path(
         "googled8f6b869755f3971.html",
         TemplateView.as_view(template_name="googled8f6b869755f3971.html"),
     ),
-
 ]
